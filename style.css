@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0f172a;
+    overflow:hidden;
+}
+
+.background{
+    position:fixed;
+    inset:0;
+    background:
+    url("https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1920")
+    center center/cover;
+    z-index:-1;
+}
+
+.container{
+    width:95%;
+    max-width:1100px;
+    text-align:center;
+}
+
+.top-bar h1{
+    color:white;
+    font-size:52px;
+    margin-bottom:25px;
+    text-shadow:0 0 15px rgba(255,255,255,.3);
+}
+
+.glass{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:30px;
+    padding:25px;
+    margin-bottom:25px;
+}
+
+.engine-label-wrapper{
+    display:flex;
+    justify-content:center;
+    margin-bottom:15px;
+}
+
+#currentEngineLabel{
+    min-width:300px;
+    padding:15px 25px;
+    border-radius:20px;
+    color:white;
+    font-size:20px;
+    font-weight:700;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.engines{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.engine-card{
+    width:120px;
+    height:120px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.engine-card:hover{
+    transform:translateY(-5px) scale(1.05);
+}
+
+.engine-card.active{
+    background:rgba(0,140,255,.25);
+
+    border:1px solid #2ea3ff;
+
+    box-shadow:
+    0 0 20px rgba(46,163,255,.8),
+    0 0 40px rgba(46,163,255,.4);
+}
+
+.engine-card img{
+    width:90%;
+    height:90%;
+    object-fit:contain;
+    border-radius:18px;
+}
+
+.controls{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.controls button{
+    padding:15px 22px;
+    border:none;
+    border-radius:20px;
+    background:rgba(255,255,255,.12);
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.controls button:hover{
+    transform:translateY(-3px);
+}
+
+h3{
+    color:white;
+    margin-bottom:10px;
+}
+
+.light{
+    background:#f4f4f4;
+}

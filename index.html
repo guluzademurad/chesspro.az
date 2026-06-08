@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Murad Pro Chess Edition</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <div class="top-bar">
+        <h1>Murad Pro Chess Edition</h1>
+
+
+    <h3>Выбранный сайт</h3>
+
+    <div class="engine-label-wrapper">
+        <div id="currentEngineLabel">
+            Chess-Results.com
+        </div>
+    </div>
+
+    <h3>Быстрый переход</h3>
+
+    <div class="glass engines">
+
+        <div class="engine-card"
+             onclick="setEngine('chesscom',this)">
+            <img src="data:image/png;base64,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" alt="">
+        </div>
+
+        <div class="engine-card"
+             onclick="setEngine('lankaran',this)">
+            <img src="https://tour2026.chess.az/wp-content/uploads/2025/02/Lankaran-open-2026-2048x1608.jpg" alt="">
+        </div>
+
+        <div class="engine-card"
+             onclick="setEngine('lichess',this)">
+            <img src="https://lichess1.org/assets/logo/lichess-favicon-32.png" alt="">
+        </div>
+
+        <div class="engine-card"
+             onclick="setEngine('tour2026',this)">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PDxAPEA8QDQ8NDw8PDw8PEBANDw0NFREWFhURFRUYHSggGBomHRUVIT0iJSkrLi4uFx81ODQ4NzQtLisBCgoKDg0OGhAQFyslHSUtLS8tLS0tLS0tLS0tKy0tLS0tLSstLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAADAAIDAQAAAAAAAAAAAAAAAQIDBwUGCAT/xABJEAACAgECBAQDAwYJCgcBAAABAgADEQQSBRMhMQYHUWEUIkFxgZIjMkJykaEVM0RSVWKCs9MWFyQlNVNjdMHCQ1RzlKKj0Qj/xAAYAQEAAwEAAAAAAAAAAAAAAAAAAQIDBP/EACARAQEAAgICAgMAAAAAAAAAAAABAhEDIRIxIkETUWH/2gAMAwEAAhEDEQA/ANSbRDaI4TuYlgQwI4QFgQwPSEqAse0MQMIAR7RY9pQjxAkAekMD2jMUBED0hj2lKJUDGBHgRtFAWBDA9JQEMQJwI8QhAWBDA9IxCAsCGBHCAsCG0RwgLA9IEe0cIE49oSoQCEIQAxCOOAo4GKAzFiMSsQJWVuETCTAposGOsTJAxr0lZEVkiBTe0WDKrlmBjEMweTAZilLCAooQgKOEIBCGYGAQiEZMAhFmEBwhHAUcIoDhtgsyCBGMdZW8Qs7THAs9e0XLMdfeZYGJRjvK3iFvaYoGRuvaTsMqr6zJiBjHTvDeIW/SY4FkZ7RbDKr7S4GIdIZg/eTAZEWJawxAmKEICxGYQgAhCIwCEMQgPEeYRQHmPbJEuAsYjDwbtIgXnPSHLiTvMwgYwNvX7ocyO3t98xQMv53TtiHJ94Udz9kywMWNvvmHNHpHf9JhgZcbvbEOT7x0djMkDD+b07w5kLu/3THAybc9YuXKr7SoGPOOkW6Ju8UB4gRKEDAiEIjAcIQgEJOYQLzDEUuBOI90DJgXnPSPlyU7zKIGMrjrDm+0qztNgeWPlzVxWi7Uamy+mtbRVRyCil2UZsY71bI6qOn1DSLlJN0k218Du6dvrHyveb2TyS4aP5Trj9r6f/CnA+OvKyjQ6GzVaW7UWvQVaxLjUy8jOGYbUGCMg/YDKzkxt0nxrVGNvvmLne0d3aYZdDKDu9sR8n3nZ/A3gbWcUJasCnTqdramzOzcO6oB1cj9nvNr8K8neG1DN736tvrus5CA+y14OPtJlMuTGe0zGtAk7OnfMXO9p6XPlpwXGDoUP0ybLif27pxmu8neD2A7Ev0xP6VWodsfdZuEr+bFPhXnvG7r2+kOV7zaXifygOkou1NGs5tenqsuau+vbYURSxw6dCcA/QTX/AtGuo1em07EhdRqKaWK4DBXsCkjIIzgzSZSzcVs04wtt6d4uYfSb4Pknw0/ynXfj0/+FMOp8mOFVI9tms1qV1KzuzWacKqKMkn8l2AEp+XFPjWjQuesfLm2/C/gDgHE1sOj12vs5BAsDcqpxuztbDVZwcHr7Gc9/mU4b/5nXfjo/wAKPyYw8a0LuxFunYfMDgFXDeIW6Sl7LK60qcNaVL5dNxztAH7p1yaS7m0HiGI4GBMDCEBYhHCA8QzCKAxL2CYx3maBJXHWTvMt+0xQMlStYwRRuZyFVR3ZycAD78T1b4R4Mug0Om0i/wDg1AOf51p+Z2+9iTNDeTnBPi+K1uwzVoVOpf05mcVL+I7v7BnpGc/Nl9L4QszHqaFsR63AZLEZHU9mRhgj9hmTEJiu8neI+EvotZqNG/8AJ7Cqn+fUetbfepUyeAcI+M1en0oJX4m5Kyw7qpPzMPsUEzaHnxwDDUcRRe4+FvI9stUx/wDmv4Z0Ty+1K1cW0DudqjUBST9C6sg/ewnXMt47ZWaunpbh2hq09NdFKCuqlAiIowFUf9Z9JhMeppFiPW2dtiMjYODtYYOD9O85GrpfEfNjg1Fhr573FSVZqKnsrBHfDdj92Zl0PmlwW44+L5J/49dtI/ERj981V4l8ouI6Qs2mA1+nH5uwhdQq/QMh6EgfVT19J0LUaeypjXaj02DulqNW4+1WAM6Jx4WdVS5WPUfinXU38J4hZTbXch0Oqw9brYv8S/1E87eD/wDaWg/53S/3yzidJqHrDct3r5gKPsZkFiEYKtjuCPoZyvg//aWg/wCd0v8AfLLY4eMqtu3qi8sEYoodwpKqW2Bmx0Utg4yfrNKcT83NQa9do9Zw+uu7l20Im5nRbD8hS1T+cMEnIPXHvmbvnn3z34YtPE671AA1mnDMB9ba22E/hKfsmPFJbqr5OM8vPHP8DpqgNMuobULWa23ctg6ZG126/Jhiegzn7em7/L/j+r4joxqdTpl0u9zydjFhdV/vAD1UZyPfGZ5eWX/CFg6C+xQvQAWsoA9AM9JvnxzJSZad286F/wBdX/8Ao6b+7E6NiW1rP8zMXJ/SZi5P3mTLSamkVOYswhJBCEIChJxHArMrEmXARiyZRkQKBz0l7R6TGvecr4f4W2s1en0qd9RaqEj9FO7t9yhj90DePkpwIabhvxBXFnEG5xP1FC/LUPsxub+3NhTFpqFrRK0AVK1VFUdlVRgD9kxcSsuSmxqK1uuVGNVTNy1ssA6KW+mfWcWV3dtZ081eMvFmv1HENQx1N9IpvtqqrquspWlK3KjAUj5umSe+fum8/K7jV+u4VRfqDvtzbU1mMG0V2FQ59yB19wZojx5fa/EGfV6BOH6htr6imu0sLs4w5IyFJAPVe/fvN4eWus1tmnVLuHVcO0ldVfwnLu5nNQjIO3qQMHOScnM35JPGK4+3PeKuDLr9FqNI3TnVkI38y0dUb7mAM8pWq9bsjZSypyjDsUsRsEexBH7p7Cnnjzq4D8LxI6hRiriC80eg1C4W0ff8rfaxkcOXejONj+W3mHVxCtNPqXWrXooUhiFXVYH8ZX/W9V9fabAnjhvp7HIP1B9Z3Xw35p8U0QVGsGupXps1OTYB6LaPm/FujLh/RMv29JT4eLcG0usTl6mirUp6Wor49wT1B9xOjeH/ADi4dqMLqFs0Lnplxzac/rr1A+0CbC02oS1FsrdbEcZV0YOrD1BHQzK43H2tvbTvjbyf2K1/C2Y7QWbR2HeWH/Cc9c/1Wz9s1v4Q3DiehUgqRr9KGBG0gi9QQR9DPV8015icATT8f4Vq612rrtZp+aB0HxFd9eW+1lYfhmvHyW9VXKNyTUnnD4GpKani/wATaLESoGhsPWx3LWoUnqg65x65m3BOiedtu3gt4/n26Vf/AL0b/tmfHbMotfTSHgfgK8S19eje1qFtWxt6KHbKLu2gHp1AM9NaLgumqqrqFNbCpErDOiMzBQACxx1PSeZfAvFq9DxLS6q0sKqWsNmwbm2NU6dB9fzhN0jzh4P/ADtT/wC3b/8AZryzK3pXHTU3myoXjWsVQEUcjCqAoH5BPoJ1HM7B4/4zTr+JajVUbuVbythdSjHbUqnI+nUGdemuPqKVWIo4pIURjhAUUqECpMrEjMChKxIEuAm7Ta/kDwPffqOIOMrQvw9JPbmuA1jfcu0f2zNUt9mfQDqSfQT1N4D4EOH8O0+mx86pvuPre/zP+84+6Z8uWsVsZ25+OE4nxTxn4DR3avlNeKFDGtWVCQSBnJ+gzn19JyybaPPfm1fzOM6056I1VQ+xaUyP25m9vLi/mcH4e2c/6JSh+1F2H96zzPxnXvqtRdqbMb9Ra9rAdgWOcD2Hb7puLyL8UPbUeGGokaVLLUuDLjltZnYynrnLHBH07+/TyY/Cfxnje22p0zza4B8dwu7YM3aT/SasDJJQHeo+1dw+3E7nERmc8urto8s+EfCWo4qmpOmZDZpVqfludvOVy/RW7Ajb9ehz3nFa/h9umsNOoqfT2julqlG+0Z/OHuMibx8t+A/wfxfjOnAxWV0ttHpyLGuZQPsOV/szYeu0FN6bL6q70P6FqLYv7CJveXV/jPw6eQXm3/8A+ertQTrVyx0iisgHJRdUSdwX324yP1ZsBvL3gxbd/B2mz6bSF/DnE7Bo9JVQi101pTWgwtdarWij2A6SufLLNRMx0zzXXmrao1fAU/SPFamH6oZAf3sJsRmABJIAAJJPQAfUmaB8R+KU4l4i0BpO/TaXWaWmhh2sPPQvaPYkAD2USvHN1OV6b/E1v58XbeF1r/vNZUP2V2N/2zY4movPnidFmn01Nd1VllWrZra0sV3q20uPmUHK9W+sjjnyicvTSpijbvFOtkoR4gIGBMUCYQCEIGBEcMwgVKkyoAZMoyYHYfACaU8S076y6ujT0Nz3a04V2TqiD3LbT9imegh5g8G/pLTfjnlwS5TLjmXtMy09QHzB4N/SWm/HNBeYPiR+Ia/UutzvpRZsoTe3J5aAKHCZx1ILZx9Z1tpMY8cx7hctqTvM1VrIwdGatl7OjFHX7GHUTCneZMy6HoLwX5jaBuH6b4zW1U6lKxXctr4sZ0JTef1gA39qc1/nC4N/SWm/HPL7iTMrwxbzegvFfmVotMqanQ26TX2l1qvqFhW1tP8AMQVYD6MT3B/OMjhvnRwxwOemo0jfXKc9PuKZP7poJZsLys49wnSpqKuI1Vs1li2VW2af4kAbcGvopK9RntjrF45J6Jldtqp5n8EIz8co9jVqAf2bJxnEvOLhNQPKN+rb6LXS1YJ/Ws2/9ZqPzI4xotZrQ+gqWrT10rXlahpxbZuYs+zAOOoHUZ6TqsTix9lyrvPjHzK1vE1akAaPSt0amtiz3L6WP0yP6oAHrmdd8MXJVr9HY7CuuvV6Z3dugRFtUsx9gAZxdcomaSSTUV29OnzB4N/SWmz+vPOfi7VpfxHW3VsHrt1VzI69VdNx2sPYjE4popXDCY+k3LbIsZESwJl0IMUDCA8QjiMCYRxYgGIpUUCosQhABOR0XCrbqb70C8vSqrPubDPnJIrH6RVVZz6KpM44TnOGeJtRpa666hUEreyx1apLPiDYArhywJAKDZ8pHSRd/QwfwI7ab4lLtO68yqnlg3LabrOorG6sKzAdThjgdfTP0DwpqC1ah6WFtj0mwG5a6rVrawh91YYgqjkMoYHacGL/ACjZa9OtdFNT6LadPajXhq3DhzZtL7GZiOpK9f2TPZ4z1Ret1CJyrXv27r7Va9qmr3/lHYqAHbCqQBntI+X0nph0fhe6zLLbQ1fJrvW5fiLEsre1qhtVai+Q6sCCoxiYrOA6hRqzhP8AV7bLsPncwLbhX0+faFZj2woz7T6KfF2o3M1irY1lFOndt99LMtTlkbNTqVPXBxgH0zmZh4z1W/cFoAa2621OSjLe9oCvuLZYDYAnykHA6nPWT8jp8zeF9SSAOVtZl2WczbVdWaec1yMR/FqmGLHGNwHfpPm0fArL7xRRbp72as2cxLHWoDO3axdQysW2qAR1Lr65jq45enw+3aV0ld1KIwNiPTa7tYjgnqDzCvTHQD69ZdXiCykP8LTRo+YKlYohuO2tmYD8sX7swOf6iekdo6HDfD2purruRV2W6r4PJJBqv+THMGMqubAM9evTvjK4dwa29bXDV116cotj2GwqC27H8WjED5T1IAH1M+rTeLdTXeuoRakdL79QyhDyrXvFXMVlJ7E0q3TGD19MY/D3HBpLHsNe98FqnVrUZLx1QNtdd1ZJ+ZTnOB0js6fHfwq1dKNYdvJ5pq75f9fb/MyCufUYn11eE9Y1z07VRq9XXoi1hdK3udnUFWK/Mn5NuvoR0hqfEuoepqGFJofT/D8oVIABnfzAwG7dvy/fGSemJk/yu1fNstLb+bq69ZsdrHSuxGdgiAt8qflCMegEfI6fG3BNRXRbe6bFo1I0jqf4w6nByiqPzsbcZ9xPuPhe8Xvpnu01ViVNcC72sllao7uUZK2yV5bgg46qQMyNL4p1Kivfsu5B0xr5i52tpxZy2IB+Zs2ZJPUlVzJs8S6lzWzmux6U1VSvsWs8vUVsjqQmAcb2YdO7GOzp8uj4O9xuK20qmmCb7W+IZGDuVUoErZzkj6qOneZz4Zu20MLaD8U1S0qPifm5lxqUljVsUZBOC2cfTPSfLoeLXadLkpdq/iFqV7EZ67FCOWAVlIxnPWfania4JpkKKx0bUtW5t1PzGu7mgvXv2MSSQTtzg+sns6FHhm52Ra7dPcrvdWba2uNdVlVLWujqa94OxGIwpzjpKq8N2N0W/TZN6aZAx1FRu1LIHWtQ1QIOCB820ZMrT+KLK2Q1UU0Ij32NUhvHNttpelnZy+8ELY2NpGMy9N4t1FRPKVaw93OsUvdcbDyuWVZ7HL4x9Qcg9jI+SenGHg950/xW0Cs38jBbFm7tvx22bvk3Z/O6T67vDb1W3U220h6KWsfabVWkrdVWeZvrGV/KZyuQcHBMR8TX8v4fZSdN8N8NyTUpUpndv3/n7t/z/nYz9ItV4lusrNQrrSs020hd19m1bHpdtpsdiozQmFHQZbp1js6XT4X1Rtrobl1WWPeqixyoFdI+e8nGBVnoG+pzifK/BrVos1DlKkqstpKvzd7XVBS9fyoVU/MAN5XJ7TPX4kvXJXliw6XT6PmMgtZdPTjCgPkfMQpPT9HpiZW8UWn4hjVVzdYjpdaDcu/fUK3Zqw/LYnq3VTgsSI7R04fiGjfT3WUPt30uUfaSV3D0OBkTBPp4nrW1F9t7gK1zl2C5Cgn0zPmMkOKEIBCEIBHFHADFHFAYlyBHmAP2kyiZOIFV95kmNe/pL3D1gTZIlscycGBVcuQnTv0lbh6wJskS369pOIFVy5CnHeVuEDG/eKNosQKEcQhmBMIQgOKGYZgGYjDEcBQjzFAcIQgEckSswAxQMIAJcnEe6ANJjJzDECq5cxjpHvgFkiUesW0wGkyZmMdIboA8mUesWIDWMxA4hugIxRxQGIGLMMwAQMUZgEDDMWYChHCA4QhAIQiMBgxiTiMGAyYoQxAB3lyI8wG0mOGIAsuQIZgDxQPWGIDWOTHmAoQhAYhFCAGEWIQHCKOBIgYwI8QJzCGIQHmOEIBCEIBCBhAI4oQAmIGMxAQKEIoQAmEDFiAxHFmEAMIQgAhCEAhFiAEBwhCAQhCAQhCAQhCAQhCAQhCAQhCARQhAcIQgKOEICEcIQCIQhAYhCEAhCEAgYQgEIQgEIQgEIQgKEIQP/9k=" alt="">
+        </div>
+
+        <div class="engine-card"
+             onclick="setEngine('fide',this)">
+            <img src="https://ratings.fide.com/favicon.ico" alt="">
+        </div>
+
+    </div>
+
+    <h3>Настройки</h3>
+
+    <div class="glass controls">      
+
+        <button onclick="document.getElementById('bgUpload').click()">
+            Загрузить обои
+        </button>
+
+        <button onclick="resetBackground()">
+            Стандартные обои
+        </button>
+         <img src="file:///C:/Users/%D0%90%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%BE%D1%80/Downloads/e2d20f67-ede6-4910-be80-9a7895b96742.png" alt="">
+        </div>
+
+          
+
+        <input
+            type="file"
+            id="bgUpload"
+            accept="image/*"
+            hidden
+        >
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
